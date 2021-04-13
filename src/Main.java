@@ -16,23 +16,23 @@ public class Main {
 //        main.setLightSpawns(simController.nextInt());
 
         // set values for user inputs for prototype.
-        int roadSpawns = 2;
-        int car_spawns = 1;
-        int lightSpawns = 1;
+        int RoadSpawns = 2;
+        int CarSpawns = 1;
+        int LightSpawns = 1;
 
 
         //Create objects:
         System.out.println("Object Creation:\n---------------------");
         System.out.println("Roads:");
         ArrayList<Road> all_roads = new ArrayList<>();
-        for (int i = 0; i < roadSpawns; i++) {
-            System.out.println("Please input parameters for road_" + i + "...");
+        for (int Roadnumber = 0; Roadnumber < RoadSpawns; Roadnumber++) {
+            System.out.println("Please input parameters for road_" + Roadnumber + "...");
             System.out.print("Length:");
             int lengthInput = simController.nextInt();
 //            System.out.print("Speed limit:");
 //            int speedLimitInput = simController.nextInt();
             int ask_for_speed = 1; // force speed limit to be 1 for prototype.
-            all_roads.add(new Road(Integer.toString(i), ask_for_speed, lengthInput, new int[]{0, 0}));
+            all_roads.add(new Road(Integer.toString(Roadnumber), ask_for_speed, lengthInput, new int[]{0, 0}));
         }
         System.out.println("\nRoads;");
         for (Road road : all_roads
@@ -42,16 +42,16 @@ public class Main {
 
         System.out.println("\nCars;");
         ArrayList<Car> cars = new ArrayList<>();
-        for (int i = 0; i < car_spawns; i++) {
-            cars.add(new Car(Integer.toString(i), all_roads.get(0))); // all created cars will begin on road_0.
-            cars.get(i).printCarStatus();
+        for (int Carnumber = 0; Carnumber < CarSpawns; Carnumber++) {
+            cars.add(new Car(Integer.toString(Carnumber), all_roads.get(0))); // all created cars will begin on road_0.
+            cars.get(Carnumber).printCarStatus();
         }
 
         System.out.println("\nTraffic Lights;");
         ArrayList<TrafficLight> all_lights = new ArrayList<>();
-        for (int i = 0; i < lightSpawns; i++) {
-            all_lights.add(new TrafficLight(Integer.toString(i), all_roads.get(0))); // all created lights will begin on road_0.
-            all_lights.get(i).printLightStatus();
+        for (int Lightnumber = 0; Lightnumber < LightSpawns; Lightnumber++) {
+            all_lights.add(new TrafficLight(Integer.toString(Lightnumber), all_roads.get(0))); // all created lights will begin on road_0.
+            all_lights.get(Lightnumber).printLightStatus();
         }
         System.out.println();
 
