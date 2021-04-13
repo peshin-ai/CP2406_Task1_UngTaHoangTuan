@@ -1,3 +1,10 @@
+/*
+  Name: Ung Ta Hoang Tuan
+  Subject: CP2406 - Programming III
+  Start date: 12/4/2021
+  Github link: https://github.com/peshin-ai/CP2406_Task1_UngTaHoangTuan
+
+ */
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
